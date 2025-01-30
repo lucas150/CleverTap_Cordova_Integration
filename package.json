@@ -1,0 +1,33 @@
+{
+  "name": "com.example.hello",
+  "displayName": "HelloWorld",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "clevertap-cordova": "github:CleverTap/clevertap-cordova",
+    "cordova-android": "^13.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "clevertap-cordova": {
+        "CLEVERTAP_ACCOUNT_ID": "TEST-4R8-7ZK-6K7Z",
+        "CLEVERTAP_TOKEN": "TEST-31a-b24"
+      }
+    }
+  },
+  "dependencies": {
+    "@awesome-cordova-plugins/clevertap": "^6.14.0"
+  }
+}
