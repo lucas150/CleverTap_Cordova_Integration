@@ -13,7 +13,7 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "clevertap-cordova": "github:CleverTap/clevertap-cordova",
+    "clevertap-cordova": "^3.4.0",
     "cordova-android": "^13.0.0",
     "cordova-ios": "^7.1.1"
   },
@@ -28,8 +28,5 @@
         "CLEVERTAP_TOKEN": "TEST-31a-b24"
       }
     }
-  },
-  "dependencies": {
-    "@awesome-cordova-plugins/clevertap": "^6.14.0"
   }
 }

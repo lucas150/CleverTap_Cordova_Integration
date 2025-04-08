@@ -2,64 +2,48 @@
 
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src * data: content:;">
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/popupModal.css">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
         <title>Hello World</title>
     </head>
     <body>
         <div class="app">
-           <!-- // <img src="img/logo.png" alt=""> -->
-            <!-- <h1>Apache Cordova</h1> -->
+            <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+    
+            <h1>CleverTap Events</h1>
+            <button id="Login">onUserLogin</button>
+            <button id="btn2">Native Display</button>
+            <br /><br />
+            <button id="btn3">test</button>
+            <button id="btn4">Inbox</button>
+            <button id="btn5">Raise InApp</button>
+            <button id="btnDisplayUnits">btnDisplayUnits</button>
+    
+            <!-- Native Display Units Will Load Here -->
+            <div id="nativeDisplayContainer"></div>
         </div>
-        <div class="ct_button"></div>
-
-        <!-- Template modal -->
-        <div id="templatePopupModal" class="modal">
-            <div class="modal-content">
-                <h2 id="modalTitle">Example template</h2>
-                <p id="modalDescription">
-                    Arguments
-                </p>
-
-                <!-- <div class="form-row">
-                    <div class="dropdown-container">
-                        <select id="typeSelector" onchange="onTypeChange()">
-                            <option value="string">String</option>
-                            <option value="number">Number</option>
-                            <option value="object">Object</option>
-                            <option value="boolean">Boolean</option>
-                            <option value="file">File</option>
-                        </select>
-                    </div>
-                    <div class="input-container">
-                        <input type="text" id="templateArgInput" placeholder="Arg Name" />
-                    </div>
-                </div>
-                <button class="action-button" id="printTemplateArgBtn">Print Arg</button>
-
-                <input type="text" id="actionArgInput" placeholder="Action Arg name" />
-                <button class="action-button" id="triggerActionBtn">Trigger Action</button>
-
-                <!-- Bottom Buttons -->
-                <div class="modal-actions">
-                    <button class="dismiss-button" id="templateDismissBtn">Dismiss</button>
-                    <button class="action-button" id="setPresentedBtn">Set Presented</button>
-                </div>
-            </div>
-        </div> -->
-
-   
-
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <!-- <script type="text/javascript" src="js/popupModal.js"></script> -->
+    
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
     </body>
+    
 </html>
