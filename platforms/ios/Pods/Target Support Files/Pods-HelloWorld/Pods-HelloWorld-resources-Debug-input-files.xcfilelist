@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-resources.sh
+${PODS_ROOT}/CleverTap-iOS-SDK/CleverTapSDK/AmazonRootCA1.cer
+${PODS_CONFIGURATION_BUILD_DIR}/CleverTap-iOS-SDK/CleverTapSDK.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle
